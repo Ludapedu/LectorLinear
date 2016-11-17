@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <SeekBar
+        android:id="@+id/seekSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/btnStart"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_above="@+id/seekSpeed"
+        android:layout_marginBottom="19dp"
+        android:background="@android:color/background_light"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/play" />
+
+    <ImageButton
+        android:id="@+id/btnStop"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_alignBaseline="@+id/btnPause"
+        android:layout_alignBottom="@+id/btnPause"
+        android:layout_alignRight="@+id/seekSpeed"
+        android:background="@android:color/background_light"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/stop" />
+
+    <ImageButton
+        android:id="@+id/btnPause"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_alignBaseline="@+id/btnStart"
+        android:layout_alignBottom="@+id/btnStart"
+        android:layout_toLeftOf="@+id/btnStop"
+        android:background="@android:color/background_light"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/pause" />
+
+    <TextView
+        android:id="@+id/txtSize"
+        style="@style/Texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/tamanotexto"
+        android:textAppearance="?android:attr/textAppearanceSmallInverse"
+        android:textColor="#2e7eba"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <SeekBar
+        android:id="@+id/seekText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSize"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp" />
+
+    <Chronometer
+        android:id="@+id/cronometro"
+        style="@style/Texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp" />
+
+    <ImageButton
+        android:id="@+id/btn.nextChapter"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_above="@+id/btnStart"
+        android:layout_alignLeft="@+id/btnStart"
+        android:background="@android:color/background_light"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/next"
+        android:visibility="invisible" />
+
+    <com.upiicsa.lectorlinear.PonerScrollTexto
+        android:id="@+id/scrolltext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:scrollHorizontally="true" />
+
+    <Button
+        android:id="@+id/btnResume"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnStop"
+        android:layout_alignRight="@+id/btnStop"
+        android:text="@string/resume" />
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/Texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnPause"
+        android:layout_centerHorizontal="true"
+        android:text="@string/velocidad" />
+
+</RelativeLayout>
